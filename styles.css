@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: rgba(226, 240, 255, 1);
+    --text-primary:rgba(35, 50, 79, 1);
+    --text-secondary:rgba(121, 194, 252, 1);
+    --joke-primary:rgba(186, 198, 216, 1);
+    --joke-secondary:rgba(132, 155, 207, 1);
+    --bg-joke-container:rgba(34, 58, 117, 1);
+}
+
+.dark-mode {
+    --bg:rgba(6, 13, 29, 1);
+    --text-primary:rgba(239, 247, 255, 1);
+    --text-secondary:rgba(93, 164, 240, 1);
+    --joke-primary:rgba(186, 198, 216, 1);
+    --joke-secondary:rgba(85, 109, 166, 1);
+    --bg-joke-container:rgba(12, 26, 59, 1);
+}   
+
+body {
+    background-color: var(--bg);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 32px;
+    width: auto;
+}
+
+.joke-heading {
+    font-size: 4em;
+    color: var(--text-primary);
+    font-weight: 900;
+}
+
+.joke-time-heading{
+    font-size: 3.5em;
+    color: var(--text-secondary);
+    font-weight: 100;
+}
+
+.joke-container {
+    position: absolute;
+    bottom: -200px;
+    border-radius: 30px;
+    width: 600px;
+    height: 150px;
+    background: var(--bg-joke-container);
+    transition: bottom 1s;
+    filter: drop-shadow(0px 12px 26px rgba(0, 0, 0, 0.29));
+}
+
+.joke-container.final {
+    position: absolute;
+    bottom: 30px;
+    border-radius: 30px;
+    width: 600px;
+    height: 150px;
+    background: var(--bg-joke-container);
+    box-shadow: 0px 12px 26px rgba(0, 0, 0, 0.29);
+}
+
+.x-icon {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    height: 24px;
+    width: auto;
+}
+
+.setup {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    margin-right: 60px;
+    font-size: 1.5em;
+    color: var(--joke-primary);
+    font-weight: 700;
+}
+
+.punchline {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    margin-right: 60px;
+    font-size: 1.25em;
+    color: var(--joke-secondary);
+}
+
+.joke-container.close {
+    transform: translateY(300px);
+    transition: 1s;
+}
+
+
+
